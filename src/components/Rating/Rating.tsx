@@ -1,7 +1,11 @@
 import React from "react";
 import Star from "./Star/Star";
 
-function Rating(props: any) {
+type RatingPropsType = {
+  value:0 | 1 | 2 | 3 | 4 | 5
+}
+
+function Rating(props: RatingPropsType) {
   if(props.value === 1) {
     return (
       <div>
