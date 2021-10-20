@@ -4,19 +4,20 @@ import Accordion from "./components/Accordion/Accordion";
 import PageTitle from "./components/PageTitle/PageTitle";
 import Rating from "./components/Rating/Rating";
 import OnOff from './components/OnOff/OnOff';
+import UncontrolledAccordion from './components/UncontrolledAccordion/UncontrolledAccordion';
 
 function App() {
   return (
     <div>
       <OnOff />
 
-
+      <UncontrolledAccordion title='UncontrolledAccordion'/>
       {/*<PageTitle title='This is App Component 1'/>*/}
       {/*<PageTitle title='This is App Component 2'/>*/}
       {/*Article 1*/}
       {/*<Rating value={3}/>*/}
-      {/*<Accordion title='Menu 1' collapsed={true}/>*/}
-      {/*<Accordion title='Menu 2' collapsed={false}/>*/}
+      {/*<UncontrolledAccordion title='Menu 1' collapsed={true}/>*/}
+      {/*<UncontrolledAccordion title='Menu 2' collapsed={false}/>*/}
       {/*Article 2*/}
       {/*<Rating value={0}/>*/}
       {/*<Rating value={1}/>*/}
