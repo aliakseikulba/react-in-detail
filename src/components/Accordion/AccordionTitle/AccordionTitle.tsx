@@ -2,11 +2,18 @@ import React from "react";
 
 type AccordionTitlePropsType = {
   title: string
+  changeStatus: (status: boolean) => void
+  status: boolean
 }
 
-function AccordionTitle(props: AccordionTitlePropsType) {
+function AccordionTitle({title, status, changeStatus}: AccordionTitlePropsType) {
+
+  const changeCollapsed = () => {
+    changeStatus(!status);
+  }
+
   return (
-    <h3>{props.title}</h3>
+    <h3 onClick={changeCollapsed}>{title}</h3>
   );
 }
 
