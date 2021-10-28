@@ -1,15 +1,23 @@
 import React from 'react';
+import {ValueType} from '../UncontrolledRating';
 
 type StarPropsType = {
   selected: boolean
-  changeValue: () => void
+  changeValue: (v: ValueType) => void
+  value: ValueType;
 }
 
-function Star({selected, changeValue}: StarPropsType) {
+function Star({selected, changeValue, value}: StarPropsType) {
+
+  const setValue = () => {
+    changeValue(value);
+  }
+
   return (
     <>
-      {selected && <span onClick={changeValue}><b>star </b></span>}
-      {!selected && <span onClick={changeValue}>star </span>}
+      <span onClick={setValue}>
+        {selected ? <b>star </b> : 'star '}
+      </span>
     </>
   );
 }
