@@ -1,14 +1,21 @@
 import React from 'react';
+import {RatingValueType} from '../Rating';
 
 type StarPropsType = {
   selected: boolean
+  onClick: (value: RatingValueType) => void
+  value: RatingValueType
 }
 
-function Star(props: StarPropsType) {
+function Star({selected, onClick, value}: StarPropsType) {
+
+  const changeRatingValue = () => {
+    onClick(value);
+  }
+
   return (
     <>
-      {props.selected && <span><b>star </b></span>}
-      {!props.selected && <span>star </span>}
+      <span onClick={changeRatingValue}>{selected ? <b>star </b> : 'star '}</span>
     </>
   );
 }
