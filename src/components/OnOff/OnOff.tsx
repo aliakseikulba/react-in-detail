@@ -1,20 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 
-// type OnOffPropsType = {
-//   on: boolean
-// }
+type OnOffPropsType = {
+  on: boolean
+  setOn: (on: boolean) => void
+}
 
-const OnOff = () => {
-  console.log('new rendering');
-
-  const [on, setOn] = useState(false);
-
-  console.log('on', on);
-
-  const onToggle = () => {
-    setOn(!on);
-  };
-
+const OnOff = ({on, setOn}: OnOffPropsType) => {
   const onStyle = {
     width: '30px',
     height: '20px',
@@ -42,10 +33,14 @@ const OnOff = () => {
     backgroundColor: on ? 'green' : 'red'
   };
 
+  const onToggle = () => {
+    setOn(!on);
+  };
+
   return (
     <div>
-      <div onClick={() => onToggle()} style={onStyle}>On</div>
-      <div onClick={() => onToggle()} style={offStyle}>Off</div>
+      <div onClick={onToggle} style={onStyle}>On</div>
+      <div onClick={onToggle} style={offStyle}>Off</div>
       <div style={indicator}></div>
     </div>
   );
