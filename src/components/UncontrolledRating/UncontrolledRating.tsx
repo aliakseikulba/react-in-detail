@@ -7,16 +7,15 @@ function UncontrolledRating() {
 
   const [value, setValue] = useState(0);
 
-  const changeValue = (v: RatingType):void => {setValue(v)}
+  const changeValue = (v: RatingType):void => setValue(v);
 
   return (
     <div>
-      <button onClick={() => {changeValue(0)}}>clear</button>
-      <Star selected={value > 0}/> <button onClick={() => {changeValue(1)}}>1</button>
-      <Star selected={value > 1}/> <button onClick={() => {changeValue(2)}}>2</button>
-      <Star selected={value > 2}/> <button onClick={() => {changeValue(3)}}>3</button>
-      <Star selected={value > 3}/> <button onClick={() => {changeValue(4)}}>4</button>
-      <Star selected={value > 4}/> <button onClick={() => {changeValue(5)}}>5</button>
+      <Star selected={value > 0} changeValue={() => changeValue(1)}/>
+      <Star selected={value > 1} changeValue={() => changeValue(2)}/>
+      <Star selected={value > 2} changeValue={() => changeValue(3)}/>
+      <Star selected={value > 3} changeValue={() => changeValue(4)}/>
+      <Star selected={value > 4} changeValue={() => changeValue(5)}/>
     </div>
   );
 }

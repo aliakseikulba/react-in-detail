@@ -2,11 +2,12 @@ import React from "react";
 
 type AccordionTitlePropsType = {
   title: string
+  onToggle: () => void
 }
 
-function AccordionTitle(props: AccordionTitlePropsType) {
+function AccordionTitle({title, onToggle}: AccordionTitlePropsType) {
   return (
-    <h3>{props.title}</h3>
+    <h3 onClick={onToggle}>{title}</h3>
   );
 }
 

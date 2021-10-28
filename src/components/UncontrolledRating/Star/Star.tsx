@@ -2,13 +2,14 @@ import React from 'react';
 
 type StarPropsType = {
   selected: boolean
+  changeValue: () => void
 }
 
-function Star(props: StarPropsType) {
+function Star({selected, changeValue}: StarPropsType) {
   return (
     <>
-      {props.selected && <span><b>star </b></span>}
-      {!props.selected && <span>star </span>}
+      {selected && <span onClick={changeValue}><b>star </b></span>}
+      {!selected && <span onClick={changeValue}>star </span>}
     </>
   );
 }
