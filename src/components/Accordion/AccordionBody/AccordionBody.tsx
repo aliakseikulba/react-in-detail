@@ -1,13 +1,15 @@
 import React from "react";
+import {itemType} from '../Accordion';
 
 type AccordionBodyPropsType = {
-  items: Array<string>
+  items: Array<itemType>
+  callBack: (value :any) => void
 }
 
-function AccordionBody({items}:AccordionBodyPropsType) {
+function AccordionBody({items, callBack}:AccordionBodyPropsType) {
   return (
     <ul>
-      {items.map((i, index) => <li key={index}>{i}</li>)}
+      {items.map(i => <li key={i.value} onClick={() => {callBack(i.value)}}>{i.title}</li>)}
     </ul>
   );
 }

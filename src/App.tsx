@@ -3,7 +3,6 @@ import './App.css';
 import Rating, {RatingValueType} from './components/Rating/Rating';
 import Accordion from './components/Accordion/Accordion';
 import OnOff from './components/OnOff/OnOff';
-import UncontrolledAccordion from './components/UncontrolledAccordion/UncontrolledAccordion';
 
 
 function App() {
@@ -14,13 +13,23 @@ function App() {
   //OnOff state
   const [on, setOn] = useState(false);
 
+
   return (
     <div>
       <Accordion
         title="Users"
         changeStatus={setCollapsed}
         status={collapsed}
-        items={['user1', 'user2', 'user3', 'user4', 'user5']}/>
+        items={[
+          {title: 'user1', value: 1},
+          {title: 'user2', value: 2},
+          {title: 'user3', value: 3},
+          {title: 'user4', value: 4},
+          {title: 'user5', value: 5},
+        ]}
+      callBack={(value) => {
+        alert(`user with id${value} was called`);
+      }}/>
       <Rating value={ratingValue} onClick={setRatingValue}/>
       <OnOff on={on} setOn={setOn}/>
     </div>
