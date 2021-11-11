@@ -28,7 +28,7 @@ function App() {
           {title: 'user5', value: 5},
         ]}
       callBack={(value) => {
-        alert(`user with id${value} was called`);
+        console.log(`user with id ${value} was called`);
       }}/>
       <Rating value={ratingValue} onClick={setRatingValue}/>
       <OnOff on={on} setOn={setOn}/>
