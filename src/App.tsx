@@ -3,6 +3,7 @@ import './App.css';
 import Rating, {RatingValueType} from './components/Rating/Rating';
 import Accordion from './components/Accordion/Accordion';
 import OnOff from './components/OnOff/OnOff';
+import UncontrolledAccordion from './components/UncontrolledAccordion/UncontrolledAccordion';
 
 
 function App() {
@@ -15,7 +16,11 @@ function App() {
 
   return (
     <div>
-      <Accordion title="Accordion with state in App" changeStatus={setCollapsed} status={collapsed}/>
+      <Accordion
+        title="Users"
+        changeStatus={setCollapsed}
+        status={collapsed}
+        items={['user1', 'user2', 'user3', 'user4', 'user5']}/>
       <Rating value={ratingValue} onClick={setRatingValue}/>
       <OnOff on={on} setOn={setOn}/>
     </div>

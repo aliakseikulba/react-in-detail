@@ -6,13 +6,14 @@ type AccordionPropsType = {
   title: string,
   changeStatus: (status: boolean) => void
   status: boolean
+  items: Array<string>
 }
 
-function Accordion({title, changeStatus, status}: AccordionPropsType) {
+function Accordion({title, changeStatus, status, items}: AccordionPropsType) {
   return (
     <div>
       <AccordionTitle title={title} changeStatus={changeStatus} status={status}/>
-      {!status && <AccordionBody/>}
+      {!status && <AccordionBody items={items}/>}
     </div>
   );
 }
