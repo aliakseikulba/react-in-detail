@@ -40,7 +40,7 @@ function App() {
       <Rating value={ratingValue} onClick={setRatingValue}/>
       <OnOff on={on} setOn={setOn}/>
       <MySelect value={selectValue}
-                items={['One', 'Two','Three', 'Four', 'Five']}
+                items={['One','Two','Three','Four','Five']}
                 callback={chooseValue}/>
     </div>
   );
