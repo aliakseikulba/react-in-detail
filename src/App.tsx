@@ -15,6 +15,11 @@ function App() {
   const [on, setOn] = useState(false);
   //MySelect state
   const [selectValue, setSelectValue] = useState<string>('choose...');
+  const chooseValue = (value: string) => {
+    setSelectValue(value);
+  }
+
+
 
   return (
     <div>
@@ -34,7 +39,9 @@ function App() {
       }}/>
       <Rating value={ratingValue} onClick={setRatingValue}/>
       <OnOff on={on} setOn={setOn}/>
-      <MySelect value={selectValue} items={['One', 'Two', 'Three', 'Four', 'Five']}/>
+      <MySelect value={selectValue}
+                items={['One', 'Two','Three', 'Four', 'Five']}
+                callback={chooseValue}/>
     </div>
   );
 }
