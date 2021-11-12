@@ -14,7 +14,7 @@ function App() {
   //OnOff state
   const [on, setOn] = useState(false);
   //MySelect state
-  const [selectValue, setSelectValue] = useState('One');
+  const [selectValue, setSelectValue] = useState<string>('choose...');
 
   return (
     <div>
@@ -34,7 +34,7 @@ function App() {
       }}/>
       <Rating value={ratingValue} onClick={setRatingValue}/>
       <OnOff on={on} setOn={setOn}/>
-      <MySelect value={selectValue}/>
+      <MySelect value={selectValue} items={['One', 'Two', 'Three', 'Four', 'Five']}/>
     </div>
   );
 }
