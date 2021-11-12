@@ -3,6 +3,7 @@ import './App.css';
 import Rating, {RatingValueType} from './components/Rating/Rating';
 import Accordion from './components/Accordion/Accordion';
 import OnOff from './components/OnOff/OnOff';
+import {MySelect} from './components/MySelect/MySelect';
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
   const [collapsed, setCollapsed] = useState<boolean>(false);
   //OnOff state
   const [on, setOn] = useState(false);
-
+  //MySelect state
+  const [selectValue, setSelectValue] = useState('One');
 
   return (
     <div>
@@ -32,6 +34,7 @@ function App() {
       }}/>
       <Rating value={ratingValue} onClick={setRatingValue}/>
       <OnOff on={on} setOn={setOn}/>
+      <MySelect value={selectValue}/>
     </div>
   );
 }

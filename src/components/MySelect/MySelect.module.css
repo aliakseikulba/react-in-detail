@@ -1,0 +1,15 @@
+.wrapper {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.selectArea {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    height: 40px;
+    border: 2px solid slategrey;
+    font-size: 24px;
+    padding: 0 20px;
+}
+
