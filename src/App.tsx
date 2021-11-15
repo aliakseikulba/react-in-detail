@@ -4,6 +4,7 @@ import Rating, {RatingValueType} from './components/Rating/Rating';
 import Accordion from './components/Accordion/Accordion';
 import OnOff from './components/OnOff/OnOff';
 import {MySelect} from './components/MySelect/MySelect';
+import {Select} from './components/Select/Select';
 
 
 function App() {
@@ -17,8 +18,7 @@ function App() {
   const [selectValue, setSelectValue] = useState<number>(0);
   const chooseValue = (value: number) => {
     setSelectValue(value);
-  }
-
+  };
 
 
   return (
@@ -34,20 +34,12 @@ function App() {
           {title: 'user4', value: 4},
           {title: 'user5', value: 5},
         ]}
-      callBack={(value) => {
-        console.log(`user with id ${value} was called`);
-      }}/>
+        callBack={(value) => {
+          console.log(`user with id ${value} was called`);
+        }}/>
       <Rating value={ratingValue} onClick={setRatingValue}/>
       <OnOff on={on} setOn={setOn}/>
-      <MySelect value={selectValue}
-                items={[
-                  {value: 1,title:'One'},
-                  {value: 2,title:'Two'},
-                  {value: 3,title:'Three'},
-                  {value: 4,title:'Four'},
-                  {value: 5,title:'Five'}
-                ]}
-                callback={chooseValue}/>
+      <Select/>
     </div>
   );
 }
