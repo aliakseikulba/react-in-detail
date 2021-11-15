@@ -19,6 +19,10 @@ function App() {
   const chooseValue = (value: number) => {
     setSelectValue(value);
   };
+  //Select
+  const callback = () => {
+    console.log('hello');
+  }
 
 
   return (
@@ -39,7 +43,12 @@ function App() {
         }}/>
       <Rating value={ratingValue} onClick={setRatingValue}/>
       <OnOff on={on} setOn={setOn}/>
-      <Select/>
+      <Select selectValue='1'
+              onChange={callback}
+              items={[
+                {title: 'One', value: '1'},
+                {title: 'Two', value: '2'},
+                {title: 'Three', value: '3'}]}/>
     </div>
   );
 }
