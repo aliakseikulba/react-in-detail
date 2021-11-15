@@ -32,7 +32,8 @@ export const MySelect = ({value, items, callback}: MySelectPropsType) => {
   return (
     <div className={s.wrapper}>
       <div className={s.selectArea}
-           onClick={showOptions}>
+           onClick={showOptions}
+           tabIndex={0}>
         {selectHeaderObj && selectHeaderObj.value > 0 ? selectHeaderObj.title : 'choose...'}
         <img className={arrowClassName} src="https://cdn-icons-png.flaticon.com/512/25/25623.png"/>
       </div>
@@ -40,7 +41,9 @@ export const MySelect = ({value, items, callback}: MySelectPropsType) => {
         {options && items.map((i, index) => {
           return <div key={index}
                       className={s.selectItem}
-                      onClick={() => {onClickHandler(i.value)}}>
+                      onClick={() => {
+                        onClickHandler(i.value);
+                      }}>
             {i.title}
           </div>;
         })}

@@ -27,6 +27,8 @@
 }
 
 .selectOptions {
+    box-sizing: border-box;
+    position: absolute;
     display: flex;
     flex-direction: column;
     width: 200px;

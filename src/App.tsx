@@ -4,7 +4,6 @@ import Rating, {RatingValueType} from './components/Rating/Rating';
 import Accordion from './components/Accordion/Accordion';
 import OnOff from './components/OnOff/OnOff';
 import {MySelect} from './components/MySelect/MySelect';
-import {Select} from './components/Select/Select';
 
 
 function App() {
@@ -19,10 +18,6 @@ function App() {
   const chooseValue = (value: number) => {
     setSelectValue(value);
   };
-  //Select
-  const callback = () => {
-    console.log('hello');
-  }
 
 
   return (
@@ -43,12 +38,14 @@ function App() {
         }}/>
       <Rating value={ratingValue} onClick={setRatingValue}/>
       <OnOff on={on} setOn={setOn}/>
-      <Select selectValue='1'
-              onChange={callback}
-              items={[
-                {title: 'One', value: '1'},
-                {title: 'Two', value: '2'},
-                {title: 'Three', value: '3'}]}/>
+      <MySelect value={selectValue}
+                items={[
+                  {value: 1, title: 'One'},
+                  {value: 2, title: 'Two'},
+                  {value: 3, title: 'Three'},
+                  {value: 4, title: 'Four'},
+                  {value: 5, title: 'Five'}]}
+                callback={chooseValue}/>
     </div>
   );
 }
