@@ -32,8 +32,7 @@ export const MySelect = ({value, items, callback}: MySelectPropsType) => {
   return (
     <div className={s.wrapper}>
       <div className={s.selectArea}
-           onClick={showOptions}
-           tabIndex={0}>
+           onClick={showOptions}>
         {selectHeaderObj && selectHeaderObj.value > 0 ? selectHeaderObj.title : 'choose...'}
         <img className={arrowClassName} src="https://cdn-icons-png.flaticon.com/512/25/25623.png"/>
       </div>
