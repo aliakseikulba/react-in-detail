@@ -1,25 +1,11 @@
-import React, {useReducer, useState} from 'react';
+import React, {useReducer} from 'react';
 import AccordionTitle from './AccordionTitle/AccordionTitle';
 import AccordionBody from './AccordionBody/AccordionBody';
+import {reducer, TOGGLE_CONSTANT} from './reducer';
 
 type AccordionPropsType = {
   title: string
 }
-
-type ActionType = {
-  type: string
-}
-
-const TOGGLE_CONSTANT = 'TOGGLE_COLLAPSED';
-
-const reducer = (state: boolean, action: ActionType) => {
-  switch (action.type) {
-    case TOGGLE_CONSTANT:
-      return !state;
-    default:
-      return state;
-  }
-};
 
 
 function UncontrolledAccordion({title}: AccordionPropsType) {
