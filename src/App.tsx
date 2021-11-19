@@ -4,6 +4,7 @@ import Rating, {RatingValueType} from './components/Rating/Rating';
 import Accordion from './components/Accordion/Accordion';
 import OnOff from './components/OnOff/OnOff';
 import {MySelect} from './components/MySelect/MySelect';
+import UncontrolledAccordion from './components/UncontrolledAccordion/UncontrolledAccordion';
 
 
 function App() {
@@ -22,30 +23,33 @@ function App() {
 
   return (
     <div>
-      <Accordion
-        title="Users"
-        changeStatus={setCollapsed}
-        status={collapsed}
-        items={[
-          {title: 'user1', value: 1},
-          {title: 'user2', value: 2},
-          {title: 'user3', value: 3},
-          {title: 'user4', value: 4},
-          {title: 'user5', value: 5},
-        ]}
-        callBack={(value) => {
-          console.log(`user with id ${value} was called`);
-        }}/>
-      <Rating value={ratingValue} onClick={setRatingValue}/>
-      <OnOff on={on} setOn={setOn}/>
-      <MySelect value={selectValue}
-                items={[
-                  {value: 1, title: 'One'},
-                  {value: 2, title: 'Two'},
-                  {value: 3, title: 'Three'},
-                  {value: 4, title: 'Four'},
-                  {value: 5, title: 'Five'}]}
-                callback={chooseValue}/>
+
+      <UncontrolledAccordion title='UncontrolledAccordion'/>
+
+      {/*<Accordion*/}
+      {/*  title="Users"*/}
+      {/*  changeStatus={setCollapsed}*/}
+      {/*  status={collapsed}*/}
+      {/*  items={[*/}
+      {/*    {title: 'user1', value: 1},*/}
+      {/*    {title: 'user2', value: 2},*/}
+      {/*    {title: 'user3', value: 3},*/}
+      {/*    {title: 'user4', value: 4},*/}
+      {/*    {title: 'user5', value: 5},*/}
+      {/*  ]}*/}
+      {/*  callBack={(value) => {*/}
+      {/*    console.log(`user with id ${value} was called`);*/}
+      {/*  }}/>*/}
+      {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
+      {/*<OnOff on={on} setOn={setOn}/>*/}
+      {/*<MySelect value={selectValue}*/}
+      {/*          items={[*/}
+      {/*            {value: 1, title: 'One'},*/}
+      {/*            {value: 2, title: 'Two'},*/}
+      {/*            {value: 3, title: 'Three'},*/}
+      {/*            {value: 4, title: 'Four'},*/}
+      {/*            {value: 5, title: 'Five'}]}*/}
+      {/*          callback={chooseValue}/>*/}
     </div>
   );
 }
