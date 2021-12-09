@@ -5,6 +5,7 @@ import Accordion from './components/Accordion/Accordion';
 import OnOff from './components/OnOff/OnOff';
 import {MySelect} from './components/MySelect/MySelect';
 import UncontrolledAccordion from './components/UncontrolledAccordion/UncontrolledAccordion';
+import {ExampleReactMemo} from './components/HooksAndHOCs/React.memo/ReactMemo';
 
 
 function App() {
@@ -23,9 +24,8 @@ function App() {
 
   return (
     <div>
-
-      <UncontrolledAccordion title='UncontrolledAccordion'/>
-
+<ExampleReactMemo/>
+      {/*<UncontrolledAccordion title='UncontrolledAccordion'/>*/}
       {/*<Accordion*/}
       {/*  title="Users"*/}
       {/*  changeStatus={setCollapsed}*/}
