@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
 
 
-export const MessagesCounter = (props: { messageCounter: number }) => {
+const MessagesCounter = (props: { messageCounter: number }) => {
   console.log('MessagesCounter rerender');
 
   return <div>{props.messageCounter}</div>;
 };
-
-export const Users = (props: { users: Array<string> }) => {
+const Users = (props: { users: Array<string> }) => {
   console.log('Users rerender');
 
   return <>
@@ -15,6 +14,7 @@ export const Users = (props: { users: Array<string> }) => {
   </>;
 };
 
+const UsersWithReactMemo = React.memo(Users);
 
 export const ExampleReactMemo = () => {
 
@@ -25,7 +25,7 @@ export const ExampleReactMemo = () => {
     <div>
       <button onClick={() => {setCounter(counter + 1)}}>+</button>
       <MessagesCounter messageCounter={counter}/>
-      <Users users={users}/>
+      <UsersWithReactMemo users={users}/>
     </div>
   );
 };
