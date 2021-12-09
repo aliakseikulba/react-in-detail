@@ -1,31 +1,26 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import Rating, {RatingValueType} from './components/Rating/Rating';
-import Accordion from './components/Accordion/Accordion';
-import OnOff from './components/OnOff/OnOff';
-import {MySelect} from './components/MySelect/MySelect';
-import UncontrolledAccordion from './components/UncontrolledAccordion/UncontrolledAccordion';
-import {ExampleReactMemo} from './components/HooksAndHOCs/React.memo/ReactMemo';
-import {UseMemoExample} from './components/HooksAndHOCs/useMemo/UseMemo';
+import {HelpsToReactMemo} from './components/HooksAndHOCs/useMemo/UseMemo';
 
 
 function App() {
-  //Rating state
-  const [ratingValue, setRatingValue] = useState<RatingValueType>(0);
-  //Accordion state
-  const [collapsed, setCollapsed] = useState<boolean>(false);
-  //OnOff state
-  const [on, setOn] = useState(false);
-  //MySelect state
-  const [selectValue, setSelectValue] = useState<number>(0);
-  const chooseValue = (value: number) => {
-    setSelectValue(value);
-  };
+  // //Rating state
+  // const [ratingValue, setRatingValue] = useState<RatingValueType>(0);
+  // //Accordion state
+  // const [collapsed, setCollapsed] = useState<boolean>(false);
+  // //OnOff state
+  // const [on, setOn] = useState(false);
+  // //MySelect state
+  // const [selectValue, setSelectValue] = useState<number>(0);
+  // const chooseValue = (value: number) => {
+  //   setSelectValue(value);
+  // };
 
 
   return (
     <div>
-      <UseMemoExample/>
+      <HelpsToReactMemo/>
+      {/*<UseMemoExample1/>*/}
       {/*<ExampleReactMemo/>*/}
       {/*<UncontrolledAccordion title='UncontrolledAccordion'/>*/}
       {/*<Accordion*/}
