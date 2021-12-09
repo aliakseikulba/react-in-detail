@@ -6,6 +6,7 @@ import OnOff from './components/OnOff/OnOff';
 import {MySelect} from './components/MySelect/MySelect';
 import UncontrolledAccordion from './components/UncontrolledAccordion/UncontrolledAccordion';
 import {ExampleReactMemo} from './components/HooksAndHOCs/React.memo/ReactMemo';
+import {UseMemoExample} from './components/HooksAndHOCs/useMemo/UseMemo';
 
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
 
   return (
     <div>
-<ExampleReactMemo/>
+      <UseMemoExample/>
+      {/*<ExampleReactMemo/>*/}
       {/*<UncontrolledAccordion title='UncontrolledAccordion'/>*/}
       {/*<Accordion*/}
       {/*  title="Users"*/}
