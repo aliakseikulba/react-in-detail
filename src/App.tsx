@@ -4,6 +4,7 @@ import {HelpsToReactMemo} from './components/HooksAndHOCs/useMemo/UseMemo';
 import {FunctionalUseState} from './components/HooksAndHOCs/useState/FunctionalUseState';
 import {UseEffect} from './components/HooksAndHOCs/useEffect/UseEffect';
 import {SetFuncInUseEffect} from './components/HooksAndHOCs/useEffect/SetFuncInUseEffect';
+import {Clock} from './components/HooksAndHOCs/useEffect/Clock';
 
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
 
   return (
     <div>
-      <SetFuncInUseEffect/>
+      <Clock/>
+      {/*<SetFuncInUseEffect/>*/}
       {/*<UseEffect/>*/}
       {/*<FunctionalUseState/>*/}
       {/*<HelpsToReactMemo/>*/}
