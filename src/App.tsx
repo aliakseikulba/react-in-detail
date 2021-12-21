@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {HelpsToReactMemo} from './components/HooksAndHOCs/useMemo/UseMemo';
 import {FunctionalUseState} from './components/HooksAndHOCs/useState/FunctionalUseState';
+import {UseEffect} from './components/HooksAndHOCs/useEffect/UseEffect';
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
 
   return (
     <div>
-      <FunctionalUseState/>
+      <UseEffect/>
+      {/*<FunctionalUseState/>*/}
       {/*<HelpsToReactMemo/>*/}
       {/*<UseMemoExample1/>*/}
       {/*<ExampleReactMemo/>*/}
