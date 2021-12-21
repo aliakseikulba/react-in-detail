@@ -3,6 +3,7 @@ import './App.css';
 import {HelpsToReactMemo} from './components/HooksAndHOCs/useMemo/UseMemo';
 import {FunctionalUseState} from './components/HooksAndHOCs/useState/FunctionalUseState';
 import {UseEffect} from './components/HooksAndHOCs/useEffect/UseEffect';
+import {SetFuncInUseEffect} from './components/HooksAndHOCs/useEffect/SetFuncInUseEffect';
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
 
   return (
     <div>
-      <UseEffect/>
+      <SetFuncInUseEffect/>
+      {/*<UseEffect/>*/}
       {/*<FunctionalUseState/>*/}
       {/*<HelpsToReactMemo/>*/}
       {/*<UseMemoExample1/>*/}
