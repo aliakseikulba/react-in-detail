@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import {HelpsToReactMemo} from './components/HooksAndHOCs/useMemo/UseMemo';
+import {FunctionalUseState} from './components/HooksAndHOCs/useState/FunctionalUseState';
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
 
   return (
     <div>
-      <HelpsToReactMemo/>
+      <FunctionalUseState/>
+      {/*<HelpsToReactMemo/>*/}
       {/*<UseMemoExample1/>*/}
       {/*<ExampleReactMemo/>*/}
       {/*<UncontrolledAccordion title='UncontrolledAccordion'/>*/}
