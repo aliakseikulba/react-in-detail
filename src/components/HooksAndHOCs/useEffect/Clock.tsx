@@ -5,9 +5,10 @@ const Clock = () => {
   const [date, setDate] = useState(new Date());
   console.log('render');
 
-  const hours = date.getHours().toString().length < 2 ? `0${date.getHours()}` : date.getHours();
-  const minutes = date.getMinutes().toString().length < 2 ? `0${date.getMinutes()}` : date.getMinutes();
-  const seconds = date.getSeconds().toString().length < 2 ? `0${date.getSeconds()}` : date.getSeconds();
+  const doubleNumberTime = (time: number) => time.toString().length < 2 ? `0${time}` : time;
+  const hours = doubleNumberTime(date.getHours());
+  const minutes = doubleNumberTime(date.getMinutes());
+  const seconds = doubleNumberTime(date.getSeconds());
 
   useEffect(() => {
     setTimeout(() => {
