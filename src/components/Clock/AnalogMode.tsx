@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './AnalogMode.module.css'
+import s from './AnalogMode.module.css';
 
 type AnalogModePropsType = {
   hours: string | number
@@ -9,16 +9,18 @@ type AnalogModePropsType = {
 
 const AnalogMode = ({hours, minutes, seconds}: AnalogModePropsType) => {
 
-  const hr_rotation = 30 * Number(hours) + Number(minutes) / 2;
-  const min_rotation = 6 * Number(minutes);
-  const sec_rotation = 6 * Number(seconds);
+  const secondsStyle = {transform: `rotate(${Number(seconds)* 6}deg)`};
+  const minutesStyle = {transform: `rotate(${Number(minutes) * 6}deg)`};
+  const hoursStyle = {transform: `rotate(${Number(hours) * 30}deg)`};
 
   return (
     <div className={s.wrapper}>
       <div className={s.clock}>
-        <div className={s.hour} style={{transform: `rotate(${hr_rotation}deg)`}}></div>
-        <div className={s.minute} style={{transform: `rotate(${min_rotation}deg)`}}></div>
-        <div className={s.second} style={{transform: `rotate(${sec_rotation}deg)`}}></div>
+        <div className={s.analogClock}>
+          <div className={`${s.dial} ${s.seconds}`} style={secondsStyle} />
+          <div className={`${s.dial} ${s.minutes}`} style={minutesStyle} />
+          <div className={`${s.dial} ${s.hours}`} style={hoursStyle} />
+        </div>
       </div>
     </div>
   );

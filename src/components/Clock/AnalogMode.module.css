@@ -8,40 +8,38 @@
 }
 
 .clock {
-    width: 600px;
-    height: 600px;
-    position: relative;
-    padding: 2rem;
-    border: 7px solid #ffffff;
+    width: 120px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clock .analogClock {
+    width: 100px;
+    height: 100px;
+    border: solid 1px #000;
     border-radius: 50%;
-    margin: 50px auto;
+    position: relative;
+    background: #fff;
 }
-
-.hour,
-.minute,
-.second {
+.clock .analogClock .dial {
     position: absolute;
-    background: #ffffff;
-    border-radius: 10px;
-    transform-origin: bottom;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    transform-origin: bottom left;
 }
-.hour {
-    width: 1.8%;
-    height: 25%;
-    top: 25%;
-    left: 48.85%;
+.clock .analogClock .dial.seconds {
+    border-left: solid 1px #282932;
+}
+.clock .analogClock .dial.minutes {
+    border-left: solid 1px #282932;
+}
+.clock .analogClock .dial.hours {
+    width: 35px;
+    height: 35px;
+    top: 15px;
+    border-left: solid 2px #282932;
 }
 
-.minute {
-    width: 1.6%;
-    height: 30%;
-    top: 19%;
-    left: 48.9%;
-}
-
-.second {
-    width: 1%;
-    height: 40%;
-    top: 9%;
-    left: 49.25%;
-}

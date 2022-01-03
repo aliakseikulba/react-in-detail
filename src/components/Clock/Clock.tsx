@@ -5,10 +5,9 @@ const Clock = () => {
 
   const [date, setDate] = useState(new Date());
 
-  const doubleNumberTime = (time: number) => time.toString().length < 2 ? `0${time}` : time;
-  const hours = doubleNumberTime(date.getHours());
-  const minutes = doubleNumberTime(date.getMinutes());
-  const seconds = doubleNumberTime(date.getSeconds());
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -28,9 +27,9 @@ const Clock = () => {
 
   return (
     <>
-      {/*<h1>*/}
-      {/*  {hours}:{minutes}:{seconds}*/}
-      {/*</h1>*/}
+      <h1>
+        {hours}:{minutes}:{seconds}
+      </h1>
       <AnalogMode hours={hours} minutes={minutes} seconds={seconds}/>
     </>
   );
