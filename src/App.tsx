@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import {Clock} from './components/Clock/Clock';
+import {EffectCanceling} from './components/HooksAndHOCs/useEffect/EffectCanceling';
 
 
 function App() {
 
   return (
     <div>
-      <Clock/>
+      <EffectCanceling />
     </div>
   );
 }
